@@ -22,6 +22,25 @@ class _OtpVerificationState extends State<OtpVerification> {
               style: TextStyle(fontSize: 16)),
 
           // 4 otp containers
+          Row( children: [
+            Container(
+              width: 60, height: 60,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.black)),
+              child: TextField(decoration: InputDecoration(),),
+            ),
+            Container(
+              width: 60, height: 60,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.black)),
+            ),
+            Container(
+              width: 60, height: 60,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.black)),
+            ),
+            Container(
+              width: 60, height: 60,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.black)),
+            ),
+          ],)
 
           //sign up button
           //Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginSuccessPage()));

@@ -21,9 +21,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Log In")),
+      appBar: AppBar(title: const Text("Log In")),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Column(children: [
           const Text("Welcome Back",
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.w500)),
@@ -73,12 +73,11 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => ForgetPassword()));
+                          builder: (context) => const ForgetPassword()));
                 },
-                child: Text("Forget Password",
+                child: const Text("Forget Password",
                     style: TextStyle(
-                        fontSize: 16,
-                        color: const Color.fromARGB(255, 233, 144, 9))))
+                        fontSize: 16, color: Color.fromARGB(255, 233, 144, 9))))
           ]),
 
           const SizedBox(height: 12),
@@ -89,7 +88,10 @@ class _LoginPageState extends State<LoginPage> {
               boxColor: Colors.orange.shade700,
               textColor: Colors.white,
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginSuccessPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginSuccessPage()));
               }),
 
           const SizedBox(height: 20),
@@ -125,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
 
           //don't have an account and sign up button
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text(
+            const Text(
               "Don't have an account? ",
               style: TextStyle(fontSize: 16),
             ),
@@ -136,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SignUpPage()));
                 },
-                child: Text("Sign Up",
+                child: const Text("Sign Up",
                     style: TextStyle(
                         color: Colors.orange,
                         fontSize: 16,
